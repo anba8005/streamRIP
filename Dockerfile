@@ -9,10 +9,10 @@ RUN apt-get update -qqy \
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
-RUN mkdir /usr/share/nginx/streamRIP/
+RUN mkdir /usr/share/nginx/streamRIP
 
 COPY streamrip.conf /etc/nginx/nginx.conf
-COPY *.sh /usr/share/nginx/streamRIP
+COPY *.sh /usr/share/nginx/streamRIP/
 
 EXPOSE 1935
 
