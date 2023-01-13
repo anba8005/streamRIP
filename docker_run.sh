@@ -1,1 +1,1 @@
-docker run -p $1:1935 -v $2:/filler.mp4 -it streamrip
+docker run -d --name streamrip-$1 -p $1:1935 -v $2:/filler.mp4 -it streamrip
