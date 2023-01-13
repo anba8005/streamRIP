@@ -14,8 +14,6 @@ RUN mkdir /usr/share/nginx/streamRIP
 COPY streamrip.conf /etc/nginx/nginx.conf
 COPY *.sh /usr/share/nginx/streamRIP/
 
-RUN mkdir /media
-
 EXPOSE 1935
 
 STOPSIGNAL SIGQUIT
