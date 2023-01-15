@@ -1,1 +1,2 @@
-docker run -d --name streamrip-$1 -p $1:1935 -v $2:/media -it streamrip
+docker stop streamrip-$1
+docker run --rm --name streamrip-$1 --mount type=tmpfs,destination=/mnt/hls -p $1:1935 -v $2:/media -it streamrip
